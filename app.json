@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/receive/receive"
+  ],
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#abcdef",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "",
+        "selectedIconPath": "",
+        "text": "扔瓶子"
+      },
+      {
+        "pagePath": "pages/receive/receive",
+        "iconPath": "",
+        "selectedIconPath": "",
+        "text": "收瓶子"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#abcdef",
+    "navigationBarTitleText": "心愿瓶",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
