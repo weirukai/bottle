@@ -1,0 +1,11 @@
+<!--pages/Secpages/voice/voice.wxml-->
+ <view class="page-head">
+    <view class="page-head-title">{{title}}</view>
+    <view class="page-head-line"></view>
+    <view wx:if="{{desc}}" class="page-head-desc">{{desc}}</view>
+  </view>
+  <block wx::if={{recording===false&&playing===false&&hasrecord===false}}>
+    
+
+    
+  </block>
