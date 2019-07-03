@@ -41,4 +41,10 @@ image {
   border-radius: 130rpx;
   margin: 0 auto;
 }
+.foot{
+width: 100%;
+background-color: #23f551;
+height: 30%
+
+}
 

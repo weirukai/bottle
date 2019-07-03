@@ -15,14 +15,12 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "",
-        "selectedIconPath": "",
+      
         "text": "扔瓶子"
       },
       {
         "pagePath": "pages/receive/receive",
-        "iconPath": "",
-        "selectedIconPath": "",
+    
         "text": "收瓶子"
       }
     ]

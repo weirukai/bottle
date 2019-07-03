@@ -8,7 +8,7 @@
   <view class="page-body">
    <view class="page-section"> 
 <!--开始录音之前-->
-  <block  wx:if="{{recording === false && playing === false && hasrecord === false}}" >
+  <block  wx:if="{{recording === false && hasrecord === false}}" >
         <view class="page-body-time">
           <text class="time-big">{{recordingtime}}</text>
         </view>
@@ -35,7 +35,7 @@
         </view>
     </block>
     <!--录音完之后，播放之前-->
-    <block wx:if="{{hasrecord === true && playing === false}}">
+    <block wx:if="{{hasrecord === true}}">
         <view class="page-body-time">
           <text class="time-big">{{playingtime}}</text>
           <text class="time-small">{{recordingtime}}</text>
@@ -56,4 +56,8 @@
 
   </view>
   </view>
+<view class='foot' bindtap='{{hasrecord?"throwbottle":""}}'>
+后期按钮
+
+</view>
 
