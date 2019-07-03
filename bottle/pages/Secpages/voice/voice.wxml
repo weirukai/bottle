@@ -4,8 +4,56 @@
     <view class="page-head-line"></view>
     <view wx:if="{{desc}}" class="page-head-desc">{{desc}}</view>
   </view>
-  <block wx::if={{recording===false&&playing===false&&hasrecord===false}}>
-    
 
-    
+  <view class="page-body">
+   <view class="page-section"> 
+<!--开始录音之前-->
+  <block  wx:if="{{recording === false && playing === false && hasrecord === false}}" >
+        <view class="page-body-time">
+          <text class="time-big">{{recordingtime}}</text>
+        </view>
+        <view class="page-body-buttons">
+          <view class="page-body-button"></view>
+          <view class="page-body-button" bindtap="startRecord">
+            <image src="../../../images/record.png"></image>
+          </view>
+          <view class="page-body-button"></view>
+        </view>
   </block>
+
+<!--录音进行中-->
+<block wx:if="{{recording === true}}">
+        <view class="page-body-time">
+          <text class="time-big">{{recordingtime}}</text>
+        </view>
+        <view class="page-body-buttons">
+          <view class="page-body-button"></view>
+          <view class="page-body-button" bindtap="stopRecord">
+            <view class="button-stop-record"></view>
+          </view>
+          <view class="page-body-button"></view>
+        </view>
+    </block>
+    <!--录音完之后，播放之前-->
+    <block wx:if="{{hasrecord === true && playing === false}}">
+        <view class="page-body-time">
+          <text class="time-big">{{playingtime}}</text>
+          <text class="time-small">{{recordingtime}}</text>
+        </view>
+        <view class="page-body-buttons">
+         <!-- <view class="page-body-button"></view>-->
+          <view class="page-body-button" bindtap="{{playingvoice?'stopvoice':''}}">
+            <image src="../../../images/stop.png"></image>
+          </view>
+          <view class="page-body-button" bindtap="playVoice">
+            <image src="../../../images/play.png"></image>
+          </view>
+          <view class="page-body-button" bindtap="clear">
+            <image src="../../../images/trash.png"></image>
+          </view>
+        </view>
+      </block>
+
+  </view>
+  </view>
+

@@ -16,9 +16,7 @@ Page({
            { id:"record",
             name:"打开录音"
             },
-            { id:"recordUpload",
-              name:"本地上传"
-              }
+           
             ],
         others: "",
        
@@ -87,7 +85,7 @@ Page({
   //音频下面打开录音事件
  clickrecord ()
   {
-    console.log(1)
+    //console.log(1)
     wx:wx.navigateTo({
       url: '../Secpages/voice/voice',
       success: function(res) {},
