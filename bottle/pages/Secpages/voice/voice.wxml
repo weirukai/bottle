@@ -1,4 +1,5 @@
 <!--pages/Secpages/voice/voice.wxml-->
+<view class='container backgroundimage'>
  <view class="page-head">
     <view class="page-head-title">{{title}}</view>
     <view class="page-head-line"></view>
@@ -55,9 +56,11 @@
       </block>
 
   </view>
-  </view>
-<view class='foot' bindtap='{{hasrecord?"throwbottle":""}}'>
+  <view class='foot' bindtap='{{hasrecord?"throwbottle":""}}'>
 后期按钮
 
 </view>
+  </view>
 
+
+</view>

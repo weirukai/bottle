@@ -44,7 +44,11 @@ image {
 .foot{
 width: 100%;
 background-color: #23f551;
-height: 30%
+height: 100%
 
 }
+.backgroundimage{
+  background-size: cover;
+  background-repeat: no-repeat;
 
+}
