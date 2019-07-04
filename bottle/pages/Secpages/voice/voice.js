@@ -32,7 +32,8 @@ Page({
     playingtime:"00:00:00",
     playtime:0,
     playingvoice:false,//palyvoice函数启动之后更新，用来控制stop
-    // tempFilePath
+    tempFilePath:'',
+    savedfilepath:""
   },//data中的数据都是private的，需要调用对象的对外接口（方法）才能修改，
   //这里提供的修改接口是setData
 
@@ -62,7 +63,7 @@ recordinterval=setInterval(
       that.setData({
         tempFilePath:temppath,
       })
-      //console.log(temppath)
+      console.log(temppath)/////////////调试专用！！！！
     },
     
     fail: function(res) {},
@@ -85,7 +86,7 @@ recordinterval=setInterval(
 
 
 stopvoice(){
-//播放录音
+//停止播放录音
   clearInterval(playinterval)
   this.setData({
    playingtime: formatTime(0),
@@ -126,7 +127,7 @@ playVoice()
     //大bug！！！！！手机端显示正常，电脑端异常！！！！
     //
     success: function(res) {
-      //console.log(that.data.tempFilePath)
+      console.log(that.data.tempFilePath)/////////////////////调试专用
       clearInterval(playinterval)
       that.setData(
         {
@@ -137,7 +138,7 @@ playVoice()
     },
     fail: function(res) 
     {
-      //console.log(0)
+      console.log(0)
     },
     complete: function(res) {
       /*clearInterval(playinterval)
@@ -157,27 +158,28 @@ wx.navigateTo({
 })
 },
 
-
 throwbottle(){
   //后期动画
+   
   var that=this
+  console.log(this.data.tempFilePath)////////////调试专用，用后注释
   wx.saveFile({
   tempFilePath:that.data.tempFilePath,
   success(res){
     const savedfilepath=res.savedFilePath
+
     that.setData({
       savedfilepath
     })
+    wx.setStorageSync("voicesavedfilepath",res.savedFilePath )
+   
+
   },
   fail(){
   console.log("saveerror")
   }
   })
 },
-
-
-
-
 
 
   /**

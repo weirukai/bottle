@@ -1,0 +1,42 @@
+<import src="/pages/common/head.wxml" />
+<import src="/pages/common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'chooseVideo'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">视频来源:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <view value="{{sourceTypeIndex}}">
+              <view class="weui-input">{{sourceType}}</view>
+            </view>
+          </view>
+        </view>
+     </view>
+        
+      <view class="page-body-info">
+        <block wx:if="{{src === ''}}">
+          <view class="image-plus image-plus-nb" bindtap="chooseVideo">
+            <view class="image-plus-horizontal"></view>
+            <view class="image-plus-vertical"></view>
+          </view>
+          <view class="image-plus-text">添加视频</view>
+        </block>
+        <block wx:if="{{src != ''}}">
+          <video src="{{src}}" class="video"></video>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+  <view class="btn-area">
+  <button bindtap="keep">确认</button>
+  <button bindtap="cancel">取消</button>
+  </view>
+  </view>
+</view>

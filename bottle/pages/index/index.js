@@ -51,10 +51,8 @@ Page({
         pages:[
           {
             id:"picture",
-            name:"拍照"},
-            {
-              id:"pictureUpload",
-              name:"本地图片"}],
+            name:"图片"},
+            ],
         others: ""
       }
     ]
@@ -108,6 +106,9 @@ Page({
   //视频下面录像事件
   clickshooting()
   {
+    wx.navigateTo({
+      url: '../Secpages/video/video',
+    })
 
   },
   //视频下面本地上传事件
@@ -118,6 +119,9 @@ Page({
   //图片下面拍照事件
   clickpicture()
   {
+    wx.navigateTo({
+      url: '../Secpages/image/image',
+    })
 
   },
   //图片下面拍照是事件

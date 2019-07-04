@@ -7,7 +7,7 @@
   flex-direction:column;
   align-items:center;/*垂直居中*/
   justify-content: center;
-
+  
 }
 .image{
 width: 100%;
@@ -32,7 +32,8 @@ height: 100%;
 
 }
 .containsshow{
+height: 40%;
+width: 60%;
 
-background-color: #b6da18;
 position: absolute;
 }

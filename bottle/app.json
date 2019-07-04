@@ -3,9 +3,10 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/receive/receive",
-    
-    "pages/Secpages/voice/voice"
-    
+    "pages/Secpages/voice/voice",
+    "pages/Secpages/video/video",
+    "pages/Secpages/image/image"
+
   ],
   "tabBar": {
     "color": "#7A7E83",
@@ -15,12 +16,14 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-      
+        "iconPath": "images/icon_component.png",
+        "selectedIconPath": "images/icon_component_HL.png",
         "text": "扔瓶子"
       },
       {
         "pagePath": "pages/receive/receive",
-    
+        "iconPath": "images/icon_API.png",
+        "selectedIconPath": "images/icon_API_HL.png",
         "text": "收瓶子"
       }
     ]
@@ -33,3 +36,6 @@
   },
   "sitemapLocation": "sitemap.json"
 }
+
+
+

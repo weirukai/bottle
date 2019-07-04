@@ -1,4 +1,6 @@
 // pages/receive/receive.js
+//const audiofilepaht = require('../Secpages/voice/voice.js')
+const util = require('../../utils/util.js')
 Page({
 
   /**
@@ -18,6 +20,7 @@ Page({
     
 
   },
+  
   receive(){
     //更新页面
     this.setData({
@@ -34,6 +37,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(wx.getStorageSync("voicesavedfilepath"))
 
   },
 
