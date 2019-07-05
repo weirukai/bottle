@@ -1,9 +1,8 @@
-<import src="../../../common/head.wxml" />
-<import src="../../../common/foot.wxml" />
+<import src="../../common/head.wxml" />
+
 
 <view class="container">
-  <template is="head" data="{{title: 'saveFile'}}"/>
-
+  <template is="head" data="{{title: '心愿瓶——记录你的心灵之声'}}"/>
   <view class="page-body">
     <view class="page-section">
       <view class="page-body-info">
@@ -22,13 +21,14 @@
         </block>
       </view>
       <view class="btn-area">
-        <button type="primary" bindtap="saveFile">保存图片</button>
-        <button bindtap="clear">删除图片</button>
+        <button class='goodbutton'  hover-class="hover" bindtap="saveFile">保存图片</button>
+        <button class='goodbutton1'  hover-class="hover" bindtap="clear">删除图片</button>
       </view>
     </view>
+   
   </view>
 
   <modal title="{{dialog.title}}" hidden="{{dialog.hidden}}" no-cancel bindconfirm="confirm">{{dialog.content}}</modal>
 
-  <template is="foot" />
+ 
 </view>

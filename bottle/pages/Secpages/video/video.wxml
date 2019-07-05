@@ -11,10 +11,9 @@
   
 <view class="page-body-info">
  <block wx:if="{{src === ''}}">
-   <view class="image-plus image-plus-nb" bindtap="chooseVideo">
-   <view class="image-plus-horizontal"></view>
-   <view class="image-plus-wertical"></view>
-   </view>
+   <image class="in-image"  src="../../../images/camera2.jpg"bindtap="chooseVideo">
+  
+   </image>
    <view class="image-plus-text" style='font-family:"楷体"'>点击拍摄视频</view>
         </block>
         <block wx:if="{{src != ''}}">

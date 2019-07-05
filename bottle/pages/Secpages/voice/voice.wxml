@@ -56,10 +56,10 @@
       </block>
 
   </view>
-  <view class='foot' bindtap='{{hasrecord?"throwbottle":""}}'>
-后期按钮
+  
+<button class='footbutton' bindtap='{{hasrecord?"throwbottle":""}}'>扔瓶子</button>
 
-</view>
+
   </view>
 
 

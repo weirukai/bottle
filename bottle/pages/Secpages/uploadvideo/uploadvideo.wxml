@@ -2,41 +2,31 @@
 <import src="/pages/common/foot.wxml" />
 
 <view class="container">
-  <template is="head" data="{{title: 'chooseVideo'}}"/>
+  <template is="head" data="{{title: '心愿瓶——记录你的心灵之声'}}"/>
 
   <view class="page-body">
     <view class="page-section">
-      <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__hd">
-            <view class="weui-label">视频来源:</view>
-          </view>
-          <view class="weui-cell__bd">
-            <view value="{{sourceTypeIndex}}">
-              <view class="weui-input">{{sourceType}}</view>
-            </view>
-          </view>
-        </view>
-     </view>
         
       <view class="page-body-info">
         <block wx:if="{{src === ''}}">
-          <view class="image-plus image-plus-nb" bindtap="chooseVideo">
-            <view class="image-plus-horizontal"></view>
-            <view class="image-plus-vertical"></view>
-          </view>
-          <view class="image-plus-text">添加视频</view>
+        <image src="../../../images/video.png"  class="in-image" bindtap="chooseVideo">
+       
+       </image>
+
+          <view class="image-plus-text" style="font-family:'楷体'">添加视频</view>
         </block>
         <block wx:if="{{src != ''}}">
           <video src="{{src}}" class="video"></video>
         </block>
-      </view>
+      
     </view>
   </view>
-  <view class="page-section">
+  <view class="page-section back">
   <view class="btn-area">
-  <button bindtap="keep">确认</button>
-  <button bindtap="cancel">取消</button>
+  <button bindtap="keep" class="back button" hover-class='button-hover'>确认</button>
+  <button bindtap="cancel" class="back button" hover-class='button-hover1'>取消</button>
   </view>
   </view>
+</view>
+
 </view>

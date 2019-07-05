@@ -52,7 +52,7 @@ Page({
 
         } else {
          wx.navigateTo({
-           url: '/pages/index/index',
+           url: 'uploadvideo',
          })
         }
       }

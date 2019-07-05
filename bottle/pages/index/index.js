@@ -109,11 +109,14 @@ Page({
     wx.navigateTo({
       url: '../Secpages/video/video',
     })
-
   },
   //视频下面本地上传事件
-  clickshootingUplod()
+  clickshootingUpload()
   {
+    console.log ("video")
+    wx.navigateTo({
+      url: '../Secpages/uploadvideo/uploadvideo',
+    })
 
   },
   //图片下面拍照事件

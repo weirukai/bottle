@@ -5,14 +5,15 @@
     "pages/receive/receive",
     "pages/Secpages/voice/voice",
     "pages/Secpages/video/video",
-    "pages/Secpages/image/image"
+    "pages/Secpages/image/image",
+    "pages/Secpages/uploadvideo/uploadvideo"
 
   ],
   "tabBar": {
     "color": "#7A7E83",
     "selectedColor": "#3cc51f",
     "borderStyle": "black",
-    "backgroundColor": "#abcdef",
+    "backgroundColor": "#E8D3B8",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -30,7 +31,7 @@
   },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#abcdef",
+    "navigationBarBackgroundColor": "#E8D3B8",
     "navigationBarTitleText": "心愿瓶",
     "navigationBarTextStyle": "black"
   },

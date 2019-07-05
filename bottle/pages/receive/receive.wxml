@@ -1,22 +1,36 @@
 <!--pages/receive/receive.wxm
 <!--receice.wxml-->
 <!--捡瓶子-->
-<!--开始的时候先播放一段动画，动画播放完之后再显示收到的瓶子 
-要先在js文件里面设置好生命周期函数-->
+<!--开始的时候先播放一段动画，动画播放完之后再显示收到的瓶子 要先在js文件里面设置好生命周期函数-->
 <!--播放视频参考video组件，要求不给用户所有的控制按钮，视频放完最后不在渲染视频容器-->
+<view class='imagecontainer'>
+   <image class='image' src='../../images/timg.jpg' mode='scaleToFill' ></image>
+   <button class='cover-{{buttonshow?"show":"hide"}}' bindtap='receive' >收瓶子
+   </button><!--button是会隐藏的-->
 
-<view class='imagecontainer' style='background-imade=""'>
-  <image class='image' src='../../images/timg.jpg' mode='scaleToFill' ></image>
-   <button class='cover-{{buttonshow?"show":"hide"}}' bindtap='receive' >收瓶子</button><!--button是会隐藏的-->
-  <view class='contains{{containshow?"show":"hide"}}'><view>
-  <video  ></video>
-  
-  
-  </view></view>
-</view>
+   <view wx:if="{{choose===0}}">
+       <view class="text-box" scroll-y="true" scroll-top="{{scrollTop}}">
+        <text>{{text}}</text>
+      </view>
+    </view>
+
+   <view wx:elif="{{choose===1}}">
+        <view class="voice"></view>
+    </view>
+   
+   <view wx:elif="{{choose===2}}">
+      <image class="photo" src=""></image>
+    </view>
+
+   <view wx:elif="{{choose===3}}">
+       <video id="myVideo" src="{{videosrc}}" binderror="videoErrorCallback"   show-center-play-btn='{{false}}' show-play-btn="{{true}}" controls></video>
+    </view>
+    
+  <view class='contains{{containshow?"show":"hide"}}'><view></view></view>
+</view>            
 
 
-<!--视频播放完之后背景放一张照片，并且弹出瓶子里面的内容，-->
+<!--视频播放完之后背景放一张照片，并且弹出瓶子里面的内容，瓶子里面内容看看能不能用cover-view组件不完全遮盖背景-->
 <!--<view>
    <image></image>
 </view>-->

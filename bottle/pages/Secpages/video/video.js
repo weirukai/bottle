@@ -72,7 +72,7 @@ Page({
         if (res.cancel) {
         } else {
           wx.navigateTo({
-            url: '/pages/index/index1',
+            url: 'video',
 
         })
       }
