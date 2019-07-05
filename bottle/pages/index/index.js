@@ -3,6 +3,7 @@
 const app = getApp()
 
 Page({
+  //配置页面的初始数据
   data: {
     userInfo: {},
     hasUserInfo: false,
@@ -61,7 +62,7 @@ Page({
   kindToggle(e)
   {
     
-    var id=e.currentTarget.id
+    var id=e.currentTarget.id//获取当前的节点对象
     var list=this.data.list
     for(var i=0 ;i<list.length;i++)
     {
@@ -125,7 +126,6 @@ Page({
     wx.navigateTo({
       url: '../Secpages/image/image',
     })
-
   },
   //图片下面拍照是事件
   clickpictureUpload()
@@ -133,7 +133,6 @@ Page({
 
   },
   
-
   /*官方函数
   kindToggle(e) {
     const id = e.currentTarget.id//e是事件对象，得到的是当前对象的id，点第一个那么值就是view

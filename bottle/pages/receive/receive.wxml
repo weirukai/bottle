@@ -4,7 +4,7 @@
 <!--开始的时候先播放一段动画，动画播放完之后再显示收到的瓶子 要先在js文件里面设置好生命周期函数-->
 <!--播放视频参考video组件，要求不给用户所有的控制按钮，视频放完最后不在渲染视频容器-->
 <view class='imagecontainer'>
-   <image class='image' src='../../images/timg.jpg' mode='scaleToFill' ></image>
+
    <button class='cover-{{buttonshow?"show":"hide"}}' bindtap='receive' >收瓶子
    </button><!--button是会隐藏的-->
 

@@ -9,6 +9,8 @@
   <view class="page-body">
    <view class="page-section"> 
 <!--开始录音之前-->
+
+
   <block  wx:if="{{recording === false && hasrecord === false}}" >
         <view class="page-body-time">
           <text class="time-big">{{recordingtime}}</text>
@@ -36,6 +38,8 @@
         </view>
     </block>
     <!--录音完之后，播放之前-->
+
+
     <block wx:if="{{hasrecord === true}}">
         <view class="page-body-time">
           <text class="time-big">{{playingtime}}</text>
@@ -43,6 +47,8 @@
         </view>
         <view class="page-body-buttons">
          <!-- <view class="page-body-button"></view>-->
+
+
           <view class="page-body-button" bindtap="{{playingvoice?'stopvoice':''}}">
             <image src="../../../images/stop.png"></image>
           </view>
@@ -61,6 +67,5 @@
 
 
   </view>
-
 
 </view>

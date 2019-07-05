@@ -1,14 +1,4 @@
-.imagecontainer{
-  height: 100%;
- background-color: #b6da18;
-  position:fixed;
-  width: 100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;/*垂直居中*/
-  justify-content: center;
 
-}
 .image{
 width: 100%;
 height: 100%;
@@ -58,4 +48,16 @@ position: absolute;
   height: 200rpx;
 
   background: lightskyblue;
+}
+.imagecontainer{
+  height: 100%;
+background-repeat: no-repeat;
+background-size: cover;
+  position:fixed;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;/*垂直居中*/
+  justify-content: center;
+background-image: url("")
 }
